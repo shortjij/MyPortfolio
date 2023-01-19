@@ -1,8 +1,8 @@
 ---
 categories:
-- Example Category
-date: 2022-03-06 00:00:00+0000
-description: Welcome to My Portfolio
+- Personal
+date: 2022-01-19 00:00:00+0000
+description: Welcome to My Portfolio!
 image: cover.jpg
 slug: hello-world
 title: About Me
