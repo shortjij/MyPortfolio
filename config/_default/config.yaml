@@ -1,8 +1,9 @@
-baseurl: https://demo.stack.jimmycai.com
+blbaseurl: https://demo.stack.jimmycai.com
 languageCode: en-us
 paginate: 5
-title: Hugo Theme Stack Starter
+title: "Juliana's Portfolio"
 DefaultContentLanguage: en
 hasCJKLanguage: no
 disqusShortname: hugo-theme-stack
+
 
