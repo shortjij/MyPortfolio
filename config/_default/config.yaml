@@ -1,0 +1,8 @@
+baseurl: https://demo.stack.jimmycai.com
+languageCode: en-us
+paginate: 5
+title: Hugo Theme Stack Starter
+DefaultContentLanguage: en
+hasCJKLanguage: no
+disqusShortname: hugo-theme-stack
+
