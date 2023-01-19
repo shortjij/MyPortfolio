@@ -2,15 +2,13 @@
 categories:
 - Example Category
 date: 2022-03-06 00:00:00+0000
-description: Welcome to Hugo Theme Stack
+description: Welcome to My Portfolio
 image: cover.jpg
 slug: hello-world
-tags:
-- Example Tag
-title: Hello World
+title: About Me
 ---
 
-Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!
+My name is Juliana
 
 For more information about this theme, check the documentation: https://docs.stack.jimmycai.com/
 
