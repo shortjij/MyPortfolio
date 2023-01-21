@@ -1,14 +1,14 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
+title: 'Some Programs'
+author: 'Juliana'
 date: 2020-12-01T21:13:14-05:00
 categories: ["R"]
-tags: ["R Markdown", "plot", "regression"]
+tags: ["R Markdown", "linguisitcs"]
 ---
 
 
 
-# R Markdown
+# Praat
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
@@ -39,7 +39,6 @@ fit
 
 You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:
 
-
 ```r
 par(mar = c(0, 1, 0, 1))
 pie(
@@ -49,8 +48,3 @@ pie(
   init.angle = -50, border = NA
 )
 ```
-
-<div class="figure">
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">Figure 1: A fancy pie chart.</p>
-</div>
