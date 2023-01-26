@@ -1,7 +1,7 @@
 ---
 categories:
 - Personal
-date: 2022-01-19 00:00:00+0000
+date: 2023-01-19
 description: 
 image: Untitled_Artwork.png
 slug: hello-world
@@ -10,18 +10,28 @@ title: Welcome to my Portfolio
 
 ## About Me 
 
-I am Juliana, a soon-to-be linguist who enjoys anything related _but not limited_ to:
+I am Juliana, a linguist who enjoys anything related _but not limited_ to:
 * linguistics
 * ancient history (_specifically Greece_) 
-* art
-* music
-* animals
+* art & music
 * coffee
 
-## Purpose of this Website
+## Purpose of this Portfolio
+**my target audience:**
+- primarily be used for my fellow peers who may need to use R or any sort of programming language in their studies
+- let them be able to see some programs which may be helpful for them. 
+- Hopefully later I can format this portfolio to share with future employers
 
-- have a more professional way of showcasing any programming I may do 
-- my target audience are my peers, my friends or just anyone who may be interested to start learn about R or Praat
+**the goal of this portfolio:** 
+- provide resources to linguistics (i.e programs, small lessons)
+- lessons for using R in general. 
+
+**what program ideas do I have:** 
+- One idea I have is specifically for Praat in regards to help make it more efficient. 
+    - make it easier to correct mistakes when defining an important characterstic. 
+- A swirl program detailing the basics of a concept I may have found hard at first (i.e forloops/ifelse statements)
+
+
 
 ## Extra Information
 
