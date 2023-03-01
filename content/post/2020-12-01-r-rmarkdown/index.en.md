@@ -6,4 +6,5 @@ categories: ["R"]
 tags: ["R Markdown", "LanguageR"]
 ---
 
-I made my **first** shinyApp which primarily focused on LanguageR: <http://shortjij.shinyapps.io/LanguageR_Analysis>.
+I made my **first** shinyApp which primarily focused on LanguageR:  <http://shortjij.shinyapps.io/LanguageR_Analysis>
+
