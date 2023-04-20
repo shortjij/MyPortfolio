@@ -2,7 +2,7 @@
 title: 'Graphing App'
 author: 'Juliana'
 date: 2023-01-20
-categories: ["Linguistics"]
+categories: ["4PL3 Final Project"]
 tags: ["User-Friendly", "Graphing"]
 ---
 
