@@ -1,8 +1,8 @@
 ---
 title: "Graphing App"
 author: 'shortjij'
-date: 2020-12-01T21:13:14-05:00
-categories: ["R"]
+date: 2023
+categories: ["4PL3 Final Project"]
 tags: ["R Markdown", "plot", "regression"]
 ---
 
