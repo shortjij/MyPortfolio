@@ -1,6 +1,6 @@
 ---
-title: "Hello R Markdown"
-author: "Frida Gomam"
+title: "App Code"
+author: 'shortjij'
 date: 2020-12-01T21:13:14-05:00
 categories: ["R"]
 tags: ["R Markdown", "plot", "regression"]
@@ -14,43 +14,87 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 
 You can embed an R code chunk like this:
 
+```{r library(shiny)
 
-```r
-summary(cars)
-##      speed           dist       
-##  Min.   : 4.0   Min.   :  2.00  
-##  1st Qu.:12.0   1st Qu.: 26.00  
-##  Median :15.0   Median : 36.00  
-##  Mean   :15.4   Mean   : 42.98  
-##  3rd Qu.:19.0   3rd Qu.: 56.00  
-##  Max.   :25.0   Max.   :120.00
-fit <- lm(dist ~ speed, data = cars)
-fit
-## 
-## Call:
-## lm(formula = dist ~ speed, data = cars)
-## 
-## Coefficients:
-## (Intercept)        speed  
-##     -17.579        3.932
+library(shiny)
+library(languageR)
+library(ggplot2)
+library(stringr)
+# Define UI for application that draws a histogram
+ui <- fluidPage(
+  fluidPage(
+    theme = bslib::bs_theme(bootswatch = "minty"),
+    titlePanel("Graph Your Data"),
+    h5("This app is intended to be a quick and easy way for linguists or researchers to graph data from a csv file"),
+    tabsetPanel(
+      tabPanel("Upload File", 
+               h5("please upload a CSV file. Only csv files will be accepted at the moment"),
+               fileInput("file1", "Choose CSV File",
+                accept = c(
+                  "text/csv",
+                  "text/comma-separated-values,text/plain",
+                  ".csv")),
+      tags$hr(),
+      checkboxInput("header", "Header", TRUE),
+      tableOutput("contents"),
+      h5("Instructions for choosing variables here")),
+      selectInput('xcol', 'X Variable', ""),
+      selectInput('ycol', 'Y Variable', "", selected = ""),
+      plotOutput('MyPlot'))
+    ))
+
+
+# Define server logic required to show the previews
+server <- function(input, output, session) {
+
+#IMPORT FILES
+  output$contents <- renderTable({
+    # input$file1 will be NULL initially. After the user selects and uploads a file, it will be a data frame with 'name', 'size', 'type', and
+    #'datapath' columns. The 'datapath' column will contain the local filenames where the data can be found.
+    inFile <- input$file1
+    if (is.null(inFile))
+      return(NULL)
+    read.csv(inFile$datapath, header = input$header)
+  })
+  
+#HOW TO CONVERT/GRAPH THE DATA
+  data <- reactive({ 
+    req(input$file1) ## ?req #  require that the input is available
+    inFile <- input$file1 # tested with a following dataset: write.csv(mtcars, "mtcars.csv") and write.csv(iris, "iris.csv")
+    df <- read.csv(inFile$datapath, header = input$header)
+    # Update inputs (you could create an observer with both updateSel...)
+    # You can also constraint your choices. If you wanted select only numeric
+    # variables you could set "choices = sapply(df, is.numeric)"
+    # It depends on what do you want to do later on.
+    updateSelectInput(session, inputId = 'xcol', label = 'X Variable',
+                      choices = names(df), selected = names(df))
+    updateSelectInput(session, inputId = 'ycol', label = 'Y Variable',
+                      choices = names(df), selected = names(df)[2])
+    return(df)
+  })
+  output$contents <- renderTable({
+    data()
+  })
+
+  output$MyPlot <- renderPlot({ ggplot(x, aes(input$xcol, input$ycol)) + geom_point()
+    # for a histogram: remove the second variable (it has to be numeric as well):
+    # x    <- data()[, c(input$xcol, input$ycol)]
+    # bins <- nrow(data())
+    # hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    
+    # Correct way:
+    # x    <- data()[, input$xcol]
+    # bins <- nrow(data())
+    # hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    
+    
+    # I Since you have two inputs I decided to make a scatterplot
+    x <- data()[, c(input$xcol, input$ycol)]
+
+  })
+}
+
+# Run the application 
+shinyApp(ui = ui, server = server)
+
 ```
-
-# Including Plots
-
-You can also embed plots. See Figure <a href="#fig:pie">1</a> for example:
-
-
-```r
-par(mar = c(0, 1, 0, 1))
-pie(
-  c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
-  col = c('#0292D8', '#F7EA39', '#C4B632'),
-  init.angle = -50, border = NA
-)
-```
-
-<div class="figure">
-<img src="{{< blogdown/postref >}}index.en_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
-<p class="caption">Figure 1: A fancy pie chart.</p>
-</div>
