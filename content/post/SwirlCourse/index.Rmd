@@ -4,7 +4,7 @@ author: 'shortjij'
 categories: ["4PL3 Final Project"]
 ---
 
-In addition to the app, I also made a swirl course on how to use **forloops**. In this *first* installment of my lessons, the user learns what each part of the forloop means/does and answers a series of questions related to that. 
+I also made a swirl course on how to use **forloops**. In this *first* installment of my lessons, the user learns what each part of the forloop means/does and answers a series of questions related to that. 
 My next step will be making a lesson with a lot more hands-on examples. For now, here are some example questions I used:
 
 ```{r}

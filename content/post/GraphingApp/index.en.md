@@ -4,8 +4,6 @@ author: 'shortjij'
 categories: ["4PL3 Final Project"]
 ---
 
-
-
 # Interactive Graphing
 
 I made my first [shinyApp](https://shortjij.shinyapps.io/Graphing_App/)! Feel free to check it out and use the csv file found in the corresponding folder on github called TEST.csv
