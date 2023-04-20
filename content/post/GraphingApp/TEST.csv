@@ -1,0 +1,7 @@
+Word,Frequency,FamilySize,SynsetCount,Length,Class,FreqSingular,FreqPlural,DerivEntropy,Complex,rInfl,meanWeightRating,meanSizeRating,meanFamiliarity
+almond,4.2,0,1.1,6,plant,24,42,0,simplex,-0.54,1.49,1.89,3.72
+ant,5.35,1.39,1.1,3,animal,69,140,0.56,simplex,-0.7,3.35,3.63,3.6
+apple,6.3,1.1,1.1,5,plant,315,231,0.5,simplex,0.31,2.19,2.47,5.84
+apricot,3.83,0,1.39,7,plant,26,19,0,simplex,0.3,1.32,1.76,4.4
+asparagus,3.66,0,1.1,9,plant,19,19,0,simplex,0,1.44,1.87,3.68
+avocado,3.43,0,1.39,7,plant,24,,,,,,,
