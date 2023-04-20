@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Graphing on Juliana&#39;s Portfolio</title>
+        <link>/tags/graphing/</link>
+        <description>Recent content in Graphing on Juliana&#39;s Portfolio</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Fri, 20 Jan 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/graphing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Graphing App</title>
+        <link>/p/graphing-app/</link>
+        <pubDate>Fri, 20 Jan 2023 00:00:00 +0000</pubDate>
+        
+        <guid>/p/graphing-app/</guid>
+        <description>&lt;p&gt;I made my &lt;strong&gt;first&lt;/strong&gt; shinyApp which primarily focused on interactive graphing! The purpose of this app is to give a quick visual glance at data from a csv file. To check out the app, &lt;a class=&#34;link&#34; href=&#34;https://shortjij.shinyapps.io/Graphing_App/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;click here&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
