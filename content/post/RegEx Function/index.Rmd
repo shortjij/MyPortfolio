@@ -14,7 +14,6 @@ string_info <- function(input){
     print("invalid input")
   }
 }
-about('today is a beautiful day')
-
+string_info('hello my name is Juliana')
 ```
 

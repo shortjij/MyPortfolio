@@ -15,12 +15,12 @@ I made my first [shinyApp](https://shortjij.shinyapps.io/Graphing_App/)! Feel fr
 Here is the code I used for this app:
 
 ```{r library(shiny)
-
+```{r}
 library(shiny)
 library(languageR)
 library(ggplot2)
 library(stringr)
-# Define UI for application that draws a histogram
+
 ui <- fluidPage(
   fluidPage(
     theme = bslib::bs_theme(bootswatch = "minty"),
@@ -49,8 +49,6 @@ server <- function(input, output, session) {
 
 #IMPORT FILES
   output$contents <- renderTable({
-    # input$file1 will be NULL initially. After the user selects and uploads a file, it will be a data frame with 'name', 'size', 'type', and
-    #'datapath' columns. The 'datapath' column will contain the local filenames where the data can be found.
     inFile <- input$file1
     if (is.null(inFile))
       return(NULL)
@@ -62,10 +60,6 @@ server <- function(input, output, session) {
     req(input$file1) ## ?req #  require that the input is available
     inFile <- input$file1 # tested with a following dataset: write.csv(mtcars, "mtcars.csv") and write.csv(iris, "iris.csv")
     df <- read.csv(inFile$datapath, header = input$header)
-    # Update inputs (you could create an observer with both updateSel...)
-    # You can also constraint your choices. If you wanted select only numeric
-    # variables you could set "choices = sapply(df, is.numeric)"
-    # It depends on what do you want to do later on.
     updateSelectInput(session, inputId = 'xcol', label = 'X Variable',
                       choices = names(df), selected = names(df))
     updateSelectInput(session, inputId = 'ycol', label = 'Y Variable',
@@ -76,25 +70,11 @@ server <- function(input, output, session) {
     data()
   })
 
-  output$MyPlot <- renderPlot({ ggplot(x, aes(input$xcol, input$ycol)) + geom_point()
-    # for a histogram: remove the second variable (it has to be numeric as well):
-    # x    <- data()[, c(input$xcol, input$ycol)]
-    # bins <- nrow(data())
-    # hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    
-    # Correct way:
-    # x    <- data()[, input$xcol]
-    # bins <- nrow(data())
-    # hist(x, breaks = bins, col = 'darkgray', border = 'white')
-    
-    
-    # I Since you have two inputs I decided to make a scatterplot
-    x <- data()[, c(input$xcol, input$ycol)]
-
-  })
+  output$MyPlot <- renderPlot({ ggplot(x, aes(input$xcol, input$ycol)) + geom_point()})
 }
 
 # Run the application 
 shinyApp(ui = ui, server = server)
 
 ```
+
