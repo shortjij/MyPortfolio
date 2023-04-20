@@ -1,9 +1,7 @@
 ---
 title: "Swirl Course"
 author: 'shortjij'
-date: 2023
 categories: ["4PL3 Final Project"]
-tags: ["R Markdown", "plot", "regression"]
 ---
 
 In addition to the app, I also made a swirl course on how to use **forloops**. In this *first* installment of my lessons, the user learns what each part of the forloop means/does and answers a series of questions related to that. 
