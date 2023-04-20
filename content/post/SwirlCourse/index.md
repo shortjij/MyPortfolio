@@ -1,0 +1,35 @@
+---
+title: "Swirl Course"
+author: 'shortjij'
+date: 2023
+categories: ["4PL3 Final Project"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+In addition to the app, I also made a swirl course on how to use **forloops**. In this *first* installment of my lessons, the user learns what each part of the forloop means/does and answers a series of questions related to that. 
+My next step will be making a lesson with a lot more hands-on examples. For now, here are some example questions I used:
+
+```{r}
+
+#- Class: mult_question
+#  Output: How would we format the first part in a forloop if we wanted to only look at the numbers from 1 to 20
+#  AnswerChoices: for(i in 1:10);for(1 in 20); for(i in 1:20)
+#  CorrectAnswer: for(i in 1:20)
+#  AnswerTests: omnitest(correctVal= 'for(i in 1:20)')
+#  Hint: remember that using x:y character means you created a sequence from x to y. Also remember i is a #placeholder. 
+
+#- Class: mult_question
+#  Output: If we wanted to add 1 to a vector of numbers, how could we format that inside the for loop?
+#  AnswerChoices: i + 1;vector + 1;sum(vector)
+#  CorrectAnswer: i + 1
+#  AnswerTests: omnitest(correctVal= 'i + 1')
+#  Hint: Remember i is a placeholder for ONE INSTANCE in the vector.
+
+#- Class: text_question
+#  Output: write a forloop if you wanted add 1 to each number in the sequence 1:10. The format should be for(i in #____){print(__ + 1)}
+#  CorrectAnswer: for(i in 1:10){print(i + 1)}
+#  AnswerTests: omnitest(correctVal='for(i in 1:10){print(i + 1)}')
+#  Hint: maybe try this, for(i in 1:10){print(i + 1)}
+
+```
+
