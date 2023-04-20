@@ -1,0 +1,49 @@
+- Class: meta
+  Course: My_Course
+  Lesson: The wonderous world of ForLoops
+  Author: Juliana Short-Jimenez
+  Type: Standard
+  Organization: your organization's name goes here
+  Version: 2.4.5
+
+- Class: text
+  Output: Hi! Thank you for choosing this lesson! Today, this lesson will focus on forloops, their purpose and how to use them. This lesson is intended to be a brief and simple introduction into a rather complicated process in R and is very useful to avoid having to do the same function by subsetting a value one by one. 
+
+- Class: text
+  Output: Let's start with a small introduction into what is a forloop. A forloop will take a list or vector and perform any function you would like on each item in that list/vector. Its format will always be like so, for(i in vector) {do this action/function}. An important thing to note, is that i is a placeholder and simply means to extract each value at a time. Before we break down what is going on at each step, lets try to run one and see what happens.
+
+- Class: cmd_question
+  Output:  copy this code; for(i in 1:10){ print(paste("this number is", i))}
+  CorrectAnswer: for(i in 1:10){print(paste("this number is", i))}
+
+  AnswerTests: omnitest(correctExpr= for(i in 1:10){ print(paste("this number is", i))})
+  Hint: just copy the above code and run it in the console
+
+- Class: text
+  Output: Look at you, already running your first forloop! Now we can break down what happened. First we had to define what we wanted to manipulate, this is shown in the for(). Inside this bracket, we wrote 'i in 1:10'. As we stated before, i is a placeholder, so what we have so far is ‘for i (each number) in the sequence 1 to 10’.
+
+- Class: text
+  Output: Next, we have the parentheses. Inside the parentheses, we detail what function or action we want to do for each element in our vector. This action could be anything we desire to manipulate to each element in the list. In our example we wanted to print the statement ‘this number is’ and the number we are on. This means, on the first loop, the output will be ‘this number is 1’, on the second loop it would be ‘this number is 2’ , on the third loop it would be ‘this number is 3’ and so on until we get to the end of the sequence or vector, hence the name for loop!
+
+- Class: mult_question
+  Output: How would we format the first part in a forloop if we wanted to only look at the numbers from 1 to 20
+  AnswerChoices: for(i in 1:10);for(1 in 20); for(i in 1:20)
+  CorrectAnswer: for(i in 1:20)
+  AnswerTests: omnitest(correctVal= 'for(i in 1:20)')
+  Hint: remember that using x:y character means you created a sequence from x to y. Also remember i is a placeholder. 
+
+- Class: mult_question
+  Output: If we wanted to add 1 to a vector of numbers, how could we format that inside the for loop?
+  AnswerChoices: i + 1;vector + 1;sum(vector)
+  CorrectAnswer: i + 1
+  AnswerTests: omnitest(correctVal= 'i + 1')
+  Hint: Remember i is a placeholder for ONE INSTANCE in the vector.
+
+- Class: text_question
+  Output: write a forloop if you wanted add 1 to each number in the sequence 1:10. The format should be for(i in ____){print(__ + 1)}
+  CorrectAnswer: for(i in 1:10){print(i + 1)}
+  AnswerTests: omnitest(correctVal='for(i in 1:10){print(i + 1)}')
+  Hint: maybe try this, for(i in 1:10){print(i + 1)}
+
+- Class: text
+  Output: Great work! I hope this was a nice beginner lesson into forloops, the next one will be utilizing a lot more examples!!
