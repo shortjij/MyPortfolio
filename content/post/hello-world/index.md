@@ -26,11 +26,14 @@ I am Juliana, a linguist who enjoys anything related _but not limited_ to:
 - provide resources to linguistics (i.e programs, small lessons)
 - lessons for using R in general. 
 
-**what program ideas do I have:** 
-- One idea I have is specifically for Praat in regards to help make it more efficient. 
-    - make it easier to correct mistakes when defining an important characterstic. 
-- A swirl program detailing the basics of a concept I may have found hard at first (i.e forloops/ifelse statements)
-
+**what program have I made:** 
+- A Graphing App using Shiny
+    - you can upload a csv file, select your X and Y variables and plot (still looking into that)
+- A swirl program detailing the basics of a concept I have found hard at first: forloops
+    - Talks about the way a forloop is written and why would we use one 
+    - will get more questions further on 
+- String information function 
+    - Uses regular expressions to give you the # of words and # of vowels in the string input. 
 
 
 ## Extra Information
